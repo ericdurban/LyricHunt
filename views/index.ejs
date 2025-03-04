@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>LyricHunt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Titan+One&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+
+</head>
+
+<body>
+  <h1>What Song Do You Want to Learn the Lyrics To?</h1>
+ 
+    <!-- Form for artist and song input -->
+    <form action="/lyrics" method="POST">
+        <label for="artist">Artist: </label>
+        <input type="text" id="artist" name="artist" required>
+        
+        <label for="song">Song: </label>
+        <input type="text" id="song" name="song" required>
+
+        <button type="submit" class="get-lyrics-btn">Get Lyrics</button>
+    </form>
+
+    <!-- Display the lyrics or error message -->
+    <div class="card">
+    <% if (lyrics) { %>
+        <pre><%= lyrics %></pre>
+    <% } %>
+
+    <% if (error) { %>
+        <h2><%= error %></h2>
+    <% } %>
+  </div>
+
+<!-- Reset Button -->
+<form id="myForm">
+  <!-- Reset button at the top right -->
+  <button type="button" name="reset" class="reset-btn" id="resetBtn" onclick="resetPage()">Reset</button>
+</form>
+
+<!-- Reloads the page -->
+<script>
+    function resetPage() {
+    window.location.href='/';
+  }
+</script>
+
+<script src="/Portfolio Projects/LyricHunt/index.js"></script>
+
+</body>
+
+</html>

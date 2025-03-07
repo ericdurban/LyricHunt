@@ -47,4 +47,3 @@ This project is free to use for personal, non-commercial purposes only. You may 
 
 - Thanks to Bootstrap for the great UI Framework.
 - Thanks to Angela Yu and her amazing bootcamp that helped me develop the tools I needed to make this website!
-- Thanks to https://api.lyrics.ovh/v1 for providing this free public data to generate our lyrics! 
